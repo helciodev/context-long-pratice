@@ -1,14 +1,18 @@
 class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak(word) {
+    return `${this.name} says ${word}`;
+  }
+
+  changeName(newName) {
+    this.name = newName;
+  }
+
   static makeJet() {
-    return {
-      name: "Jet",
-      changeName(newName) {
-        this.name = newName;
-      },
-      speak(word) {
-        return `${this.name} says ${word}`;
-      },
-    };
+    return new Dog("Jet");
   }
 }
 
